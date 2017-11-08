@@ -17,11 +17,11 @@
 		<dcterms:title>vSearch Vocabulary</dcterms:title>
 		<dcterms:description>The vSearch vocabulary facilitates the querying and retrieval of vocabulary terms from a vocabularies directory. It can be used to map keywords with mapped result terms accompanied with a ranking value.</dcterms:description>
 		<owl:versionInfo>v0.1</owl:versionInfo>
-    <owl:sameAs rdf:resource="http://vocab.sti2.at/vsearch"/>
+    		<owl:sameAs rdf:resource="http://vocab.sti2.at/vsearch"/>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:modified>
 		<vann:preferredNamespaceUri>http://purl.org/vsearch</vann:preferredNamespaceUri>
 		<vann:preferredNamespacePrefix>vsearch</vann:preferredNamespacePrefix>
-		<foaf:homepage rdf:resource="https://github.com/istavrak/vSearch""/>
+		<foaf:homepage rdf:resource="https://github.com/istavrak/vSearch"/>
 		<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:created>
 		<dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
 		<dc:creator rdf:resource="http://dblp.org/pers/hd/s/Stavrakantonakis:Ioannis"/>
