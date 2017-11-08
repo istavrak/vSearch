@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+  xmlns="http://vocab.sti2.at/vsearch/"
+  xml:base="http://vocab.sti2.at/vsearch/"
+  xmlns:vsearch="http://vocab.sti2.at/vsearch/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<!-- vSearch Vocabulary description -->
+	<owl:Ontology rdf:about="http://vocab.sti2.at/vsearch/">
+		<dcterms:title>vSearch Vocabulary</dcterms:title>
+		<dcterms:description>The vSearch vocabulary facilitates the querying and retrieval of vocabulary terms from a vocabularies directory. It can be used to map keywords with mapped result terms accompanied with a ranking value.</dcterms:description>
+		<owl:versionInfo>v0.1</owl:versionInfo>
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:modified>
+		<vann:preferredNamespaceUri>http://vocab.sti2.at/vsearch/</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>vsearch</vann:preferredNamespacePrefix>
+		<foaf:homepage rdf:resource="http://vocab.sti2.at/vsearch.html"/>
+		<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:created>
+		<dcterms:publisher>http://vocab.sti2.at/vsearch#STI%20Innsbruck</dcterms:publisher>
+		<dcterms:partOf rdf:resource="http://vocab.sti2.at"/>
+		<dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+		<dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+		<dc:creator rdf:resource="http://vocab.sti2.at/vsearch#istavrak"/>
+	</owl:Ontology>
+
+  <rdf:Property rdf:about="doQuery" rdfs:comment="A query that an entity executes.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">do query</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:range rdf:resource="Query"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="hasResultTerm" rdfs:comment="A result term for a query.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has result term</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:range rdf:resource="ResultTerm"/>
+    <rdfs:domain rdf:resource="Query" />
+  </rdf:Property>
+
+  <rdf:Property rdf:about="hasRank" rdfs:comment="The rank for a result term.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has rank</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:range rdf:resource="http://purl.org/voc/vrank#Rank"/>
+    <rdfs:domain rdf:resource="ResultTerm" />
+  </rdf:Property>
+
+  <rdf:Property rdf:about="language" rdfs:comment="The language of the query keyword.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:domain rdf:resource="Query"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="keyword" rdfs:comment="The keyword of the query.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">keyword</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:domain rdf:resource="Query"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="termURI" rdfs:comment="The URI of the result term.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">term URI</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+    <rdfs:domain rdf:resource="ResultTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="rankValue" rdfs:comment="The rank value of a term's ranking.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">rank value</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/voc/vrank/"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/vrank#Rank"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="Query" rdfs:comment="A query.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">query</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="ResultTerm" rdfs:comment="A result term.">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">result term</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.sti2.at/vsearch/"/>
+  </rdfs:Class>
+
+</rdf:RDF>
