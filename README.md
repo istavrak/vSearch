@@ -1,7 +1,7 @@
 # vSearch - Vocabulary for Search
 The Vocabulary for Search (vSearch) is an RDF schema to facilitate the description of a search query and the results of it.
 
-[RDF] (https://github.com/istavrak/vSearch/blob/master/vsearch.rdf), [Turtle] (https://github.com/istavrak/vSearch/blob/master/vsearch.ttl)
+[RDF](https://github.com/istavrak/vSearch/blob/master/vsearch.rdf), [Turtle](https://github.com/istavrak/vSearch/blob/master/vsearch.ttl)
 
 If you use it in your initiatives, please cite the following publication:
 ```
