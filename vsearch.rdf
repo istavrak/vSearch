@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <rdf:RDF
-  xmlns="http://purl.org/vsearch"
-  xml:base="http://purl.org/vsearch"
-  xmlns:vsearch="http://purl.org/vsearch"
+  xmlns="http://purl.org/vsearch/"
+  xml:base="http://purl.org/vsearch/"
+  xmlns:vsearch="http://purl.org/vsearch/"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:vann="http://purl.org/vocab/vann/"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -13,15 +13,15 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
 <!-- vSearch Vocabulary description -->
-	<owl:Ontology rdf:about="http://purl.org/vsearch">
+	<owl:Ontology rdf:about="http://purl.org/vsearch/">
 		<dcterms:title>vSearch Vocabulary</dcterms:title>
 		<dcterms:description>The vSearch vocabulary facilitates the querying and retrieval of vocabulary terms from a vocabularies directory. It can be used to map keywords with mapped result terms accompanied with a ranking value.</dcterms:description>
 		<owl:versionInfo>v0.1</owl:versionInfo>
-    		<owl:sameAs rdf:resource="http://vocab.sti2.at/vsearch"/>
+    		<owl:sameAs rdf:resource="http://vocab.sti2.at/vsearch/"/>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:modified>
 		<vann:preferredNamespaceUri>http://purl.org/vsearch</vann:preferredNamespaceUri>
 		<vann:preferredNamespacePrefix>vsearch</vann:preferredNamespacePrefix>
-		<foaf:homepage rdf:resource="https://github.com/istavrak/vSearch"/>
+		<foaf:homepage rdf:resource="https://istavrak.github.io/vSearch"/>
 		<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-16</dcterms:created>
 		<dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
 		<dc:creator rdf:resource="http://dblp.org/pers/hd/s/Stavrakantonakis:Ioannis"/>
@@ -30,7 +30,7 @@
   <rdf:Property rdf:about="doQuery" rdfs:comment="A query that an entity executes.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">do query</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:range rdf:resource="Query"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Property>
@@ -38,7 +38,7 @@
   <rdf:Property rdf:about="hasResultTerm" rdfs:comment="A result term for a query.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">has result term</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:range rdf:resource="ResultTerm"/>
     <rdfs:domain rdf:resource="Query" />
   </rdf:Property>
@@ -46,7 +46,7 @@
   <rdf:Property rdf:about="hasRank" rdfs:comment="The rank for a result term.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">has rank</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:range rdf:resource="http://purl.org/voc/vrank#Rank"/>
     <rdfs:domain rdf:resource="ResultTerm" />
   </rdf:Property>
@@ -54,7 +54,7 @@
   <rdf:Property rdf:about="language" rdfs:comment="The language of the query keyword.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">language</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:domain rdf:resource="Query"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
@@ -62,7 +62,7 @@
   <rdf:Property rdf:about="keyword" rdfs:comment="The keyword of the query.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">keyword</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:domain rdf:resource="Query"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
@@ -70,7 +70,7 @@
   <rdf:Property rdf:about="termURI" rdfs:comment="The URI of the result term.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">term URI</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
     <rdfs:domain rdf:resource="ResultTerm"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
@@ -86,13 +86,13 @@
   <rdfs:Class rdf:about="Query" rdfs:comment="A query.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">query</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
   </rdfs:Class>
 
   <rdfs:Class rdf:about="ResultTerm" rdfs:comment="A result term.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">result term</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vsearch/"/>
   </rdfs:Class>
 
 </rdf:RDF>
